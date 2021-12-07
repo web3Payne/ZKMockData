@@ -21,7 +21,10 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "ZKMockData",
-            dependencies: []),
+            dependencies: [
+                "Peertalk"
+            ]),
+        .binaryTarget(name: "Peertalk", path: "Sources/ZKMockData/Peertalk.xcframework"),
         .testTarget(
             name: "ZKMockDataTests",
             dependencies: ["ZKMockData"]),
