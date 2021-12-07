@@ -1,10 +1,10 @@
 import Peertalk
 
 public struct ZKMockData {
-    public private(set) var text = "Hello, ZKMAN!"
+    let manager: ZKUSBManager
 
     public init() {
-        print(text)
-        print(Peertalk.PTUSBHub.self)
+        manager = ZKUSBManager()
     }
 }
+
